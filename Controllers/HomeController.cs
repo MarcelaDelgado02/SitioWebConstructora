@@ -17,6 +17,8 @@ namespace SitioWebConstructora.Controllers
         {
             return View();
         }
+       
+
 
         public IActionResult Privacy()
         {

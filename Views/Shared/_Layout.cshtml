@@ -4,38 +4,201 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SitioWebConstructora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SitioWebConstructora.styles.css" asp-append-version="true" />
+    <link href="/assets/css/style-starter.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    @* <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SitioWebConstructora</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1>
+                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                        Grupo<span class="sublog">ABASA</span>
+                    </a>
+                </h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-lg-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            @Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "nav-link", aria_current = "page" })
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            @Html.ActionLink("Info", "Info", "Info", null, new { @class = "nav-link", aria_current = "page" })
+
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
                     </ul>
+                    <ul class="navbar-nav search-right mt-lg-0 mt-2">
+                        
+                       
+                    </ul>
+
+                    <!-- //toggle switch for light and dark theme -->
+                    <!-- search popup -->
+                    <div id="search" class="w3lpop-overlay">
+                        <div class="w3lpopup">
+                            <form action="#formsearch" method="GET" class="d-flex">
+                                <input type="search" placeholder="Search.." name="search" required="required" autofocus>
+                                <button type="submit"><span class="fas fa-search"></span></button>
+                                <a class="close" href="#formsearch">&times;</a>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /search popup -->
                 </div>
-            </div>
-        </nav>
-    </header> *@
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29 py-5">
+            <div class="container py-lg-4">
+                <div class="row align-items-center mb-3" id="contactos">
+                    <h2 class="sign-left col-lg-7"> Informaciòn de servicios y contactos. </h2>
+                    
+                </div>
 
+                <div class="row footer-top-29 mt-md-5 mt-4">
+                    <div class="col-lg-4 col-md-6 footer-list-29 footer-1 pe-lg-5">
+                        <h6 class="footer-title-29">Información general</h6>
+                        <div class="footer-listw3-grids">
+                            <p class="pe-lg-4">Información básica de los servicios de la empresa </p>
+                            <div class="w3pt-call-box mt-4">
+                                <div class="w3pt-call-info">
+                                    <h5>Contactos</h5>
+
+                                    <h5>
+                                        <a href="tel:+50686073753">
+                                            <i class="fas fa-phone-alt me-1"></i> 50686073753
+                                        </a>
+                                    </h5>
+
+                                    <h5>
+                                        <a href="https://mail.google.com/mail/?view=cm&to=grupoabasa@hotmail.com" class="mail">
+                                            <i class="far fa-envelope me-1"></i> grupoabasa@hotmail.com
+                                        </a>
+                                    </h5>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5">
+                        <h6 class="footer-title-29">Servicios</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li><a href="#team">Diseño </a></li>
+                                <li><a href="#team">Desarrollo de proyectos</a></li>
+                                <li><a href="#pro">Construcción</a></li>
+                                <li><a href="#career">Supervisión de obra</a></li>
+                                <li><a href="#terms">Obra gris </a></li>
+                                <li><a href="#tips">Instalación eléctrica</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5">
+                        <h6 class="footer-title-29">Otros Servcios</h6>
+                        <div class="footer-listw3-grids">
+                            <ul class="footer-listw3">
+                                <li><a href="#lift">Asesoramiento de vivienda</a></li>
+                                <li><a href="#cardio">Desarrollo de proyectos con el Sistema llave en mano</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
+                        <h6 class="footer-title-29">Quieres conocernos más?</h6>
+                        <p>Háblanos y míranos en</p>
+
+                       
+                        <div class="main-social-footer-29 mt-4">
+                            <a href="https://www.facebook.com/share/18YoLyrjMU/" class="facebook"><span class="fab fa-facebook-f"></span></a>
+                            
+                            
+                            <a href="https://wa.me/50686073753" class="whatsapp" target="_blank"><span class="fa-brands fa-whatsapp"></span></a>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-copies text-center">
+                    @* <p class="copy-footer-29">
+                        Marcela Pages
+                        <a href="https://w3layouts.com/" target="_blank"> W3Layouts</a>
+                    </p> *@
+                </div>
+            </div>
+        </div>
+
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+
+    </footer>
     @* <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2025 - SitioWebConstructora - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
