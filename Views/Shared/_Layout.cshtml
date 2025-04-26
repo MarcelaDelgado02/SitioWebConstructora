@@ -37,7 +37,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            @Html.ActionLink("Contactos", "Contactos", "Contactos", null, new { @class = "nav-link", aria_current = "page" })
                         </li>
 
                         <li class="nav-item">
@@ -106,14 +106,16 @@
 
                                     <h5>
                                         <a href="tel:+50686073753">
-                                            <i class="fas fa-phone-alt me-1"></i> 50686073753
+                                            <i class="fas fa-phone-alt me-1"></i> 506-8607-3753
                                         </a>
                                     </h5>
 
                                     <h5>
-                                        <a href="https://mail.google.com/mail/?view=cm&to=grupoabasa@hotmail.com" class="mail">
-                                            <i class="far fa-envelope me-1"></i> grupoabasa@hotmail.com
+                                        <a href="mailto:grupoabasa@hotmail.com" class="mail">
+                                            <i class="far fa-envelope me-1"></i> @("grupoabasa@hotmail.com")
                                         </a>
+
+
                                     </h5>
                                 </div>
 
