@@ -39,13 +39,32 @@ Author URL: http://w3layouts.com
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
-    --bs-dark: #0d6efd;
+    --bs-dark: #212529;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
+.contenedor {
+    margin-top: 30px !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
 
+.contenedor:hover {
+    background-color: rgba(255, 255, 255, 0.4)!important;
+    cursor: pointer;
+}
 
+.InfoText {
+    font-family: 'Hind Siliguri', sans-serif !important;
+    color: #212529 !important;
+    margin-left: 5px;
+}
+.Etapa{
+    color:white;
+}
 
 *,
 ::after,
@@ -3214,35 +3233,34 @@ fieldset:disabled .btn {
     border-color: var(--secondary-color);
 }
 
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #fb7216;
-    border-color: #fb7216;
-}
+    .btn-secondary:hover {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
 
-.btn-secondary:focus,
-.btn-secondary.focus {
-    color: #fff;
-    background-color: #fb7216;
-    border-color: #fb7216;
-    box-shadow: 0 0 0 0.2rem rgb(251 114 22 / 40%);
-}
+    .btn-secondary:focus,
+    .btn-secondary.focus {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 0 0.2rem rgb(251 114 22 / 40%);
+    }
 
-.btn-secondary.disabled,
-.btn-secondary:disabled {
-    color: #fff;
-    background-color: #fb7216;
-    border-color: #fb7216;
-}
+    .btn-secondary.disabled,
+    .btn-secondary:disabled {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
 
-.btn-secondary:not(:disabled):not(.disabled):active,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-secondary.dropdown-toggle {
-    color: #fff;
-    background-color: #fb7216;
-    border-color: #fb7216;
-
-}
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .show > .btn-secondary.dropdown-toggle {
+        color: #fff;
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus,
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
@@ -18462,7 +18480,7 @@ p.white {
     font-weight: 700;
     transition: 0.3s ease-in;
     border-radius: var(--border-radius);
-    text-transform: capitalize;
+    
     font-family: 'Hind Siliguri', sans-serif;
 }
 
@@ -18523,9 +18541,11 @@ p.white {
 }
 
 .title-w3l.two {
-    color: #fff;
+    color: white;
 }
-
+.Titulo {
+    color: #3b3939;
+}
 .title-subhny,
 .title-subhny.two {
     display: inline-block;
@@ -18607,6 +18627,7 @@ a.read:hover span.fas {
     .title-w3l {
         font-size: 30px !important;
         line-height: 40px;
+        color:white!important;
     }
 
     .btn-style {
@@ -20318,6 +20339,7 @@ p.inner-page-para {
 
 .w3l-grids-3 {
     background: var(--bg-light);
+    border-radius:10px;
     
 }
 
@@ -20455,24 +20477,26 @@ p.inner-page-para {
     line-height: 32px;
 }
 
-.w3l-grids-3 .grid-block:hover h4 {
-    color: #fff;
-    transition: 0.3s ease-in;
-}
+    .w3l-grids-3 .grid-block:hover h4 {
+        transform: scale(1.15);
+        color: #302f2f;
+    }
 
 .grid-block span {
     font-size: 34px;
     margin-bottom: 8px;
     color: var(--primary-color);
+   
 }
 
 .grid-block:hover span {
-    transition: 0.3s ease-in;
-    color: #fff;
+    transform: scale(1.15);
+    color: var(--primary-color);
 }
 
 .w3l-grids-3 .grid-block:hover p {
-    color: #fff;
+    color: #302f2f;
+    transition: transform 0.6s ease;
     transition: 0.3s ease-in;
 }
 
@@ -20507,7 +20531,9 @@ p.inner-page-para {
     font-size: 22px;
     line-height: 32px;
 }
-
+.w3l-grids-3 .Titulo{
+    color:red;
+}
 .w3l-grids-3.home-page-gds .grid-block p {
     color: #fff;
     transition: 0.3s ease-in;
@@ -21000,6 +21026,8 @@ p.inner-page-para {
 
 .w3l-footer-29-main .footer-29 {
     background: var(--footer-bg);
+    height:auto;
+        
 }
 
 .w3l-footer-29-main h6.footer-title-29 {
