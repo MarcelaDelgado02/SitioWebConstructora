@@ -4435,7 +4435,8 @@ fieldset:disabled .btn {
             background-color: transparent;
             border-color: transparent
         }
-
+        
+        }
         .nav-tabs .nav-item.show .nav-link,
         .nav-tabs .nav-link.active {
             color: #495057;
@@ -4524,7 +4525,8 @@ fieldset:disabled .btn {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
+    color:palevioletred;
 }
 
     .navbar-nav .nav-link {
@@ -4620,7 +4622,10 @@ fieldset:disabled .btn {
             display: none
         }
 }
-
+.nav-link {
+    color: #555 !important; /* color normal (no hover, no click) */
+    text-decoration: none; /* si quieres quitar el subrayado */
+}
 @media (min-width:768px) {
     .navbar-expand-md {
         flex-wrap: nowrap;
@@ -7467,7 +7472,9 @@ fieldset:disabled .btn {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1030
+    bottom:100px;
+    z-index: 1030;
+    background-color:white;
 }
 
 .fixed-bottom {
@@ -8601,9 +8608,7 @@ fieldset:disabled .btn {
     text-transform: uppercase !important
 }
 
-.text-capitalize {
-    text-transform: capitalize !important
-}
+
 
 .text-wrap {
     white-space: normal !important
@@ -18835,8 +18840,8 @@ header.nav-fixed {
     padding: 0;
     font-size: 34px;
     font-weight: 700;
-    text-transform: capitalize;
-    color: #fff;
+    
+    color: #000;
     margin: 0;
 }
 
