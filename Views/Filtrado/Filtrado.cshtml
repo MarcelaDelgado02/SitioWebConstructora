@@ -15,11 +15,55 @@
 
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="~/assets/js/Filtrado de tablas_JavaScript.js" />
+    <!-- jQuery DEBE ir primero -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables (versión estable) -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <!-- Tu script personalizado -->
+    <script src="~/js/Filtrado de tablas_JavaScript.js"></script>
+
 </head>
 
 <body>
-    <table class="TablaFilt">
+    <section class="w3l-index2" id="about">
+        <div class="midd-w3 py-5">
+            <div class="container py-md-5 py-3">
+                <!--/row-1-->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="w3shape position-relative">
+                            <img src="~/assets/images/ab2.jpg" alt="" class="radius-image img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4 align-self ps-lg-5">
+                        <div class="title-content text-left">
+                            <h6 class="title-subhny mb-2"><span></span></h6>
+                            <h3 class="title-w3l">
+                                ¿Buscar información?
+                                <span class="span-bold"></span>
+                            </h3>
+                        </div>
+                        <p class="mt-md-4 mt-3">
+                            En este lugar podrá encontrar información sobre los bonos que trabaja Grupo ABASA ofrece.
+                            Aquí encontrara información como características, requisitos en otros.
+                        </p>
+                        <div class="w3l-two-buttons">
+                            <a href="@Url.Action("Filtrado", "Filtrado")" class="btn btn-outline-primary btn-style mt-lg-5 mt-4 ms-2">
+                                Ver información de contacto <span class="fas fa-angle-double-right ms-2"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <!--//row-1-->
+
+            </div>
+        </div>
+    </section>
+    <table id="TbDoc" class="TablaFilt">
         <thead class="CabezaTablaFilt"> 
             <tr>
                 <th>
@@ -71,4 +115,6 @@
             </tr>
         </tbody>
     </table>
+
+   
 </body>

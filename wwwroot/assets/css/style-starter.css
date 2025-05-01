@@ -51,6 +51,7 @@ Author URL: http://w3layouts.com
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4) !important;
+    
 }
 
 .contenedor:hover {
@@ -70,6 +71,7 @@ Author URL: http://w3layouts.com
     background: #dee2e6;
     text-align: center;
     width:100%;
+    border-radius:10px;
 }
     .TablaFilt thead tr{
         background-color:#6c757d;
@@ -81,11 +83,17 @@ Author URL: http://w3layouts.com
     }
 
     .TablaFilt tbody tr:hover {
-        transform: scale(1.02); /* Aplica zoom del 2% */
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Opcional: añade sombra para destacar */
+        transform: scale(1.02)!important; /* Aplica zoom del 2% */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)!important; /* Opcional: añade sombra para destacar */
         cursor: pointer; /* Cambia el cursor para indicar interacción */
     }
+.dt-layout-cell dt-layout-start {
+    background-color: #0d6efd;
+}
 
+}.dt-orderable-asc dt-orderable-desc dt-ordering-asc {
+    color: #000;
+}
 *,
 ::after,
 ::before {
@@ -106,7 +114,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: #ffc107;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     margin-top:10%!important;
@@ -4403,18 +4411,29 @@ fieldset:disabled .btn {
 }
 .nav {
     display: flex;
-    flex-wrap: wrap;
+   
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
+    
+    /* Apilamos verticalmente */
+    flex-direction: column;
+    /* Opcional: ocultamos la altura automática para que ajuste */
+    height: auto;
+    /* Opcional: un pequeño margen interior */
+    padding: 0.5rem;
 }
 
 .nav-link {
     display: block;
-    padding: .5rem 1rem;
+    
     color: #0d6efd;
     text-decoration: none;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    /* Menos padding para que no “crezca” tanto */
+    padding: 0.5rem 0.75rem;
+    /* Texto centrado si lo quieres */
+    text-align: left;
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -18557,6 +18576,7 @@ p.white {
     line-height: 48px;
     font-weight: 400;
     text-transform: capitalize;
+    color:#212529 !important;
 }
 
 .span-bold {

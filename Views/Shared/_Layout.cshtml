@@ -14,13 +14,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>KoDeal - Business Category Bootstrap Responsive Template | Home :: W3layouts</title>
+    <title>Grupo  ABASA- Business Category Bootstrap Responsive Template | Home :: W3layouts</title>
     <!--/google-fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!--//google-fonts -->
     <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="~/assets/css/style-starter.css" />
+   <script src="/js/LayoutJavaScript.js"></script>
+
+   
 </head>
 <body>
     <!--/Header-->
@@ -43,19 +46,17 @@
 
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Información de bonos", "Info", "Info", null, new { @class = "nav-link", aria_current = "page" })
+                            @Html.ActionLink("Información de bonos", "Filtrado", "Filtrado", null, new { @class = "nav-link", aria_current = "page" })
 
                         </li>
                         <li class="nav-item">
                             @Html.ActionLink("Contactos", "Contactos", "Contactos", null, new { @class = "nav-link", aria_current = "page" })
                         </li>
 
-                        
+
 
                     </ul>
                     <ul class="navbar-nav search-right mt-lg-0 mt-2">
-                        
-                       
                     </ul>
 
                     <!-- //toggle switch for light and dark theme -->
@@ -100,7 +101,7 @@
             <div class="container py-lg-4">
                 <div class="row align-items-center mb-3" id="contactos">
                     <h2 class="sign-left col-lg-7"> Información de contactos. </h2>
-                    
+
                 </div>
 
                 <div class="row footer-top-29 mt-md-5 mt-4">
@@ -136,8 +137,6 @@
                         <h6 class="footer-title-29"></h6>
                         <div class="footer-listw3-grids">
                             <ul class="footer-listw3">
-                               
-
                             </ul>
                         </div>
                     </div>
@@ -145,8 +144,6 @@
                         <h6 class="footer-title-29"></h6>
                         <div class="footer-listw3-grids">
                             <ul class="footer-listw3">
-                                
-                                
                             </ul>
                         </div>
                     </div>
@@ -155,14 +152,14 @@
                         <h6 class="footer-title-29">Quieres conocernos más?</h6>
                         <p>Háblanos y míranos en</p>
 
-                       
+
                         <div class="main-social-footer-29 mt-4">
                             <a href="https://www.facebook.com/share/18YoLyrjMU/" class="facebook"><span class="fab fa-facebook-f"></span></a>
-                            
-                            
+
+
                             <a href="https://wa.me/50686073753" class="whatsapp" target="_blank"><span class="fa-brands fa-whatsapp"></span></a>
 
-                            
+
                         </div>
                     </div>
                 </div>
@@ -176,39 +173,16 @@
         </div>
 
         <!-- move top -->
-        <button onclick="topFunction()" id="movetop" title="Go to top">
-            <span class="fa fa-angle-up"></span>
-        </button>
-        <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {
-                scrollFunction()
-            };
+       
 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    document.getElementById("movetop").style.display = "block";
-                } else {
-                    document.getElementById("movetop").style.display = "none";
-                }
-            }
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
+        <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-
-        </script>
-        <!-- //move top -->
-
-    </footer>
-    @* <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - SitioWebConstructora - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer> *@
-   
+       
 </body>
 </html>
-<script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
