@@ -113,7 +113,7 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    
     background-color: #ffc107;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -4430,7 +4430,13 @@ fieldset:disabled .btn {
    
 }
 
-
+@media (max-width: 991.98px) {
+    .fixed-top { 
+        
+        height: 60px; 
+       
+    }
+}
 
 
 .card {
@@ -17711,7 +17717,7 @@ p.white {
 }
 
 .title-w3l.two {
-    color: white;
+    color: #fff!important;
 }
 .Titulo {
     color: #3b3939;
@@ -17787,6 +17793,7 @@ a.read:hover span.fas {
     transition: 0.3s ease-in;
 }
 
+}
 @media (max-width: 1280px) {
     .btn-style {
         padding: 18px 34px;
@@ -17797,7 +17804,7 @@ a.read:hover span.fas {
     .title-w3l {
         font-size: 30px !important;
         line-height: 40px;
-        color:white!important;
+        color:#fff!important ;
     }
 
     .btn-style {
