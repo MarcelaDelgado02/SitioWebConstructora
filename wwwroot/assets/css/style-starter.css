@@ -44,6 +44,9 @@ Author URL: http://w3layouts.com
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
+
+/* Altura del carrusel (ajusta el valor según necesites) */
+
 .contenedor {
     margin-top: 30px !important;
     border-radius: 5px;
@@ -51,13 +54,14 @@ Author URL: http://w3layouts.com
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4) !important;
-    
+    transition: 0.3s ease-in;
 }
 
-.contenedor:hover {
-    background-color: rgba(255, 255, 255, 0.4)!important;
-    cursor: pointer;
-}
+    .contenedor:hover {
+        background-color: rgba(255, 255, 255, 0.4) !important;
+        
+        transform: scale(1.15);
+    }
 
 .InfoText {
     font-family: 'Hind Siliguri', sans-serif !important;
@@ -67,14 +71,18 @@ Author URL: http://w3layouts.com
 .Etapa{
     color:white;
 }
+.dt-container {
+    background-color: #dee2e6;
+    border-radius: 20px;
+}
 .TablaFilt {
     background: #dee2e6;
     text-align: center;
-    width:100%;
-    border-radius:10px;
+    width: 100%;
+    border-radius: 10px;
 }
     .TablaFilt thead tr{
-        background-color:#6c757d;
+        background-color:#6c757d!important;
         
     }
     .TablaFilt th, .TablaFilt td {
@@ -87,13 +95,56 @@ Author URL: http://w3layouts.com
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15)!important; /* Opcional: añade sombra para destacar */
         cursor: pointer; /* Cambia el cursor para indicar interacción */
     }
-.dt-layout-cell dt-layout-start {
-    background-color: #0d6efd;
+.navbar-brand .pe-xl-5 .pe-lg-4{
+    
+}
+.CabezaTablaFilt {
+    background-color: #6c757d !important;
+}
+/* Contenedor principal */
+#TbDoc_wrapper.dt-container {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    padding: 15px;
 }
 
-}.dt-orderable-asc dt-orderable-desc dt-ordering-asc {
-    color: #000;
+/* Filas del layout */
+.dt-layout-row {
+    margin-bottom: 10px;
 }
+
+/* Celdas (ej: contenedores de búsqueda) */
+.dt-layout-cell {
+    padding: 5px;
+}
+
+/* Campo de búsqueda */
+.dt-search input {
+    background-color: #f1f1f1;
+    border: 1px solid #ced4da !important;
+    border-radius: 4px;
+    padding: 8px;
+    width: 200px;
+}
+
+/* Tabla interna */
+.dt-layout-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+    .dt-layout-table th {
+        background-color: #6c757d;
+        color: #212529;
+        padding: 12px;
+    }
+
+    /* Filas alternas */
+    .dt-layout-table tr:nth-child(even) {
+        background-color: #e9ecef;
+    }
+
 *,
 ::after,
 ::before {
@@ -6152,7 +6203,8 @@ fieldset:disabled .btn {
 }
 
 .carousel {
-    position: relative
+    position: relative;
+    height:400px;
 }
 
 .carousel.pointer-event {
@@ -6162,7 +6214,8 @@ fieldset:disabled .btn {
 .carousel-inner {
     position: relative;
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
+    height: 500px!important;
 }
 
 .carousel-inner::after {
@@ -6179,7 +6232,8 @@ fieldset:disabled .btn {
     margin-right: -100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transition: transform .6s ease-in-out
+    transition: transform .6s ease-in-out;
+    height:400px;
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -6342,12 +6396,15 @@ fieldset:disabled .btn {
 .carousel-caption {
     position: absolute;
     right: 15%;
-    bottom: 1.25rem;
+    margin-bottom: 25px;
     left: 15%;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-    color: #fff;
+    color: #000;
     text-align: center
+}
+.carousel-caption.h5{
+    color:#000;
 }
 
 .carousel-dark .carousel-control-next-icon,
@@ -6360,7 +6417,8 @@ fieldset:disabled .btn {
 }
 
 .carousel-dark .carousel-caption {
-    color: #000
+    color: #212529;
+    bottom: 25px;
 }
 
 @-webkit-keyframes spinner-border {
@@ -17706,7 +17764,17 @@ p.white {
     text-transform: capitalize;
     color:#212529 !important;
 }
-
+@media (max-width: 800px) {
+    .title-w3l
+     {
+        font-size: 38px;
+        line-height: 38px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: #212529 !important;
+    }
+    
+}
 .span-bold {
     font-weight: 700;
 }
@@ -17804,7 +17872,7 @@ a.read:hover span.fas {
     .title-w3l {
         font-size: 30px !important;
         line-height: 40px;
-        color:#fff!important ;
+        color: #212529 !important;
     }
 
     .btn-style {
@@ -17816,6 +17884,11 @@ a.read:hover span.fas {
     .title-w3l {
         font-size: 28px !important;
         line-height: 38px;
+        font-size: 38px;
+        line-height: 38px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: #212529 !important;
     }
 
     .btn-style {
@@ -18013,7 +18086,7 @@ header.nav-fixed {
     padding: 0;
     font-size: 34px;
     font-weight: 700;
-    
+    border: 1px solid transparent; 
     color: #000;
     margin: 0;
 }
@@ -18461,6 +18534,18 @@ a.search-search:hover {
     margin-bottom:20px;
 }
 
+.w3l-main-slider .banner-first {
+    background: url(../images/ImgP.jpg) no-repeat center;
+    -ms-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: 720px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
 .w3l-main-slider .banner-top2 {
     background: url(../images/ImagenB2Home.jpg) no-repeat center;
     background-size: cover;
@@ -19635,6 +19720,7 @@ p.inner-page-para {
     background-color: var(--bg-color);
     position: relative;
     padding: 40px 20px;
+    transition: 0.3s ease-in;
     -webkit-box-shadow: 0 3px 53px rgba(40, 40, 40, .05);
     -khtml-box-shadow: 0 3px 53px rgba(40, 40, 40, .05);
     -moz-box-shadow: 0 3px 53px rgba(40, 40, 40, .05);
@@ -19664,7 +19750,7 @@ p.inner-page-para {
     font-size: 34px;
     margin-bottom: 8px;
     color: var(--primary-color);
-   
+    transition: 0.3s ease-in;
 }
 
 .grid-block:hover span {
