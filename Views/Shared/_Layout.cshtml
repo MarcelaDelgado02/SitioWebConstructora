@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <title>@ViewData["Title"] - SitioWebConstructora</title>
 
     <!-- Bootstrap 5 CSS -->
@@ -18,6 +18,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="/assets/css/style-starter.css" />
+    <script src="~/js/theme-change.js"defer></script>
 
     
    
@@ -30,7 +31,7 @@
             <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
                 <!-- Logo -->
                 <h1 class="navbar-brand-container">
-                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="index.html">
+                    <a class="navbar-brand pe-xl-5 pe-lg-4" href="../Views/Home/Index.cshtml">
                         Grupo<span class="sublog">ABASA</span>
                     </a>
                 </h1>
@@ -43,7 +44,7 @@
                         aria-controls="navbarCollapse"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span class="fa-solid fa-bars"></span>
+                    <span class="fa-solid fa-bars " " style=" color: var(--bs-titulo);"></span>
                 </button>
 
                 <!-- Menú -->
@@ -63,6 +64,19 @@
 
                 <!-- Selector de tema -->
                 
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
             </nav>
         </div>
     </header>
@@ -105,12 +119,11 @@
                         </div>
                     </div>
 
-                    <!-- Columnas vacías -->
-                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5"></div>
-                    <div class="col-lg-2 col-md-6 footer-list-29 footer-3 mt-lg-0 mt-5"></div>
+                   
+                   
 
                     <!-- Columna 4 - Redes sociales -->
-                    <div class="col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
+                    <div class=" col-lg-4 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5 ps-lg-5">
                         <h6 class="footer-title-29">¿Quieres conocernos más?</h6>
                         <p>Háblanos y míranos en</p>
                         <div class="main-social-footer-29 mt-4">
@@ -142,6 +155,8 @@
 
     <!-- Script para el botón de subir -->
     <script>
+
+
         // Mostrar/ocultar botón al hacer scroll
         window.onscroll = function() {
             scrollFunction()
