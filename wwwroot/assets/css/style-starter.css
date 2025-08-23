@@ -76,15 +76,53 @@ Author URL: http://w3layouts.com
     border-radius: 20px;
 }
 .TablaFilt {
-   
     text-align: center;
     width: 100%;
     border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 50px 10px;
 }
-    .TablaFilt thead tr{
+#TbDoc td,
+#TbDoc th {
+    padding: 10px 40px;
+}.TablaFilt thead tr{
         background-color:#6c757d!important;
         
     }
+/* Columna 1 */
+#TbDoc th:nth-child(1),
+#TbDoc td:nth-child(1) {
+    width: 20%;
+}
+
+/* Columna 2 */
+#TbDoc th:nth-child(2),
+#TbDoc td:nth-child(2) {
+    width: 25%;
+    max-width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Columna 3 */
+#TbDoc th:nth-child(3),
+#TbDoc td:nth-child(3) {
+    width: 20%;
+}
+
+/* Columna 4 */
+#TbDoc th:nth-child(4),
+#TbDoc td:nth-child(4) {
+    width: 20%;
+}
+
+/* Columna 5 */
+#TbDoc th:nth-child(5),
+#TbDoc td:nth-child(5) {
+    width: 15%;
+}
+
+
     .TablaFilt th, .TablaFilt td {
         padding: 20px 10px !important; /* Aumenta el espacio vertical (20px arriba y abajo) */
         vertical-align: middle !important; /* Centra el contenido verticalmente */
