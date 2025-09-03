@@ -18165,7 +18165,7 @@ header.nav-fixed {
     font-size: 34px;
     font-weight: 700;
     border: 1px solid transparent; 
-    color: #000;
+    color: var(--bs-titulo);
     margin: 0;
 }
 
