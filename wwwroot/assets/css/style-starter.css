@@ -18986,8 +18986,8 @@ a.search-search:hover {
 /*--//w3l-circles--*/
 /*--/features--*/
 .w3l-featureshny {
-    background: url(../images/ImagenB2Home.jpg) no-repeat center;
-    -ms-background-size: cover;
+   background: url(../images/ImagenB2Home.webp);
+    background-size: cover;
     background-size: cover;
     z-index: 0;
     position: relative;
